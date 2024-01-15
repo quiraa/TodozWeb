@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --primary: #86b6f6;
+  --background: #eef5ff;
+  --container: #f8f9fa;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +19,7 @@ body {
 }
 
 header {
-  background: #5f30e2;
+  background: var(--primary);
   padding: 16px;
   color: white;
 }
@@ -28,7 +34,7 @@ header {
   width: 1024px;
   border-radius: 8px;
   margin: 16px;
-  background: #f8f9fa;
+  background: var(--container);
   padding: 16px;
   flex-grow: 1;
   height: fit-content;
@@ -78,8 +84,8 @@ header {
 input[type="text"],
 input[type="date"] {
   font-family: Raleway, sans-serif;
-  background: #f5f1ff;
-  border: 2px solid #9475ea;
+  background: var(--background);
+  border: 2px solid var(--primary);
   border-radius: 8px;
   padding: 16px;
   box-sizing: border-box;
@@ -92,8 +98,9 @@ input[type="date"] {
   font-family: Raleway, sans-serif;
   border-radius: 16px;
   padding: 12px 24px;
-  border: 2px solid #5f30e2;
-  color: black;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: var(--container);
   font-size: 24px;
   margin-top: auto;
   align-self: flex-end;
@@ -101,7 +108,7 @@ input[type="date"] {
 }
 
 .btn-submit:hover {
-  background: #5f30e2;
+  background: var(--primary);
   color: white;
 }
 
@@ -123,7 +130,7 @@ input[type="date"],
   width: 40px;
   height: 40px;
 
-  background: url("../assets/check-outline.svg");
+  background: url("/public/assets/check-outline.svg");
   background-size: contain;
   margin-left: auto;
   cursor: pointer;
@@ -131,15 +138,14 @@ input[type="date"],
 }
 
 .check-button:hover {
-  background: url("../assets/check-solid.svg");
+  background: url("/public/assets/check-solid.svg");
   background-size: contain;
 }
 
 .trash-button {
   width: 40px;
   height: 40px;
-
-  background: url("../assets/trash-outline.svg");
+  background: url("/public/assets/trash-outline.svg");
   background-size: contain;
   margin-left: 16px;
   cursor: pointer;
@@ -147,7 +153,7 @@ input[type="date"],
 }
 
 .trash-button:hover {
-  background: url("../assets/trash-fill.svg");
+  background: url("/public/assets/trash-fill.svg");
   background-size: contain;
 }
 
@@ -155,7 +161,7 @@ input[type="date"],
   width: 40px;
   height: 40px;
 
-  background: url("../assets/undo-ouline.svg");
+  background: url("/public/assets/undo-ouline.svg");
   background-size: contain;
   margin-left: auto;
   cursor: pointer;
@@ -163,7 +169,7 @@ input[type="date"],
 }
 
 .undo-button:hover {
-  background: url("../assets/undo-ouline.svg");
+  background: url("/public/assets/trash-fill.svg");
   background-size: contain;
 }
 
